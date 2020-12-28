@@ -1,0 +1,12 @@
+# Fast TBP/TFIID dynamics model
+
+# Initiation complex occupancy parameters (once every 5s, stays for 1s)
+InitComplex_on	0.2
+InitComplex_off	1
+
+# Pol II initiation rate
+Recruitment	1
+
+# Pause escape rate (once every 4s)
+PauseFactor_off	0.25
+

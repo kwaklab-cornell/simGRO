@@ -1,0 +1,14 @@
+# Hsp70-like gene BEFORE heat shock
+
+# Initiation complex occupancy parameters (once every 500s, stays for 20s)
+InitComplex_on	0.002
+InitComplex_off	0.05
+
+# Pol II initiation rate
+Recruitment	1
+
+# Pause escape rate (once every 500s)
+PauseFactor_off	0.002
+
+PostPA-Elongation	15
+Termination	0.2

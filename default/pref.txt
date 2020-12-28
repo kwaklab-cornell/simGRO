@@ -1,0 +1,42 @@
+# Default model
+
+# Gene length and positions
+GeneLength	10000
+PostPolyALength	1800
+PromoterLength	200
+PauseSite	40
+
+# Initiation rate limiting transcription factor occupancy parameters (once every 500s, stays for 20s)
+# Rows are the function of time
+TF_on	default/tf_on.txt
+TF_off	default/tf_off.txt
+
+# Pol II recruitment rate, rows are the function of time
+Recruitment	default/recruitment.txt
+
+# Pausing factor parameters, function of time 
+PF_on	default/pf_on.txt
+PF_off	default/pf_off.txt
+
+# Elongation rate, function of position and activity
+Elongation	default/elongation.txt
+
+# RNA cleavage rate (polyA), by position and activity
+Cleavage	default/cleavage.txt
+
+# Post-cleavage elongation rate, function of position and activity
+PostPA	default/postpa.txt
+
+# Termination rate, function of position and activity
+Termination	default/term.txt
+
+# Pol II initial activity distribution (scale of 1 to 100, function of time)
+Activity	default/activity.txt
+
+# Recording timepoints (seconds)
+Record	default/record.txt
+
+# DNA copies to simulate
+Copies	2000
+
+# End of preference definition

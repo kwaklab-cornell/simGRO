@@ -1,0 +1,15 @@
+7
+hsp70 NHS
+hsp70 HS
+Class 2 low esc
+Class 2 high esc
+Class 1
+Class 4
+Fast TBP dynamics
+gu/par.hsp70NHS.txt
+gu/par.hsp70HS.txt
+gu/par.class2LowEsc.txt
+gu/par.class2HighEsc.txt
+gu/par.class1.txt
+gu/par.class4.txt
+gu/par.fastTBP.txt

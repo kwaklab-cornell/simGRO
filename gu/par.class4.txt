@@ -1,0 +1,12 @@
+# Class IV gene
+
+# Initiation complex occupancy parameters (once every 10000s, stays for 0.1s)
+InitComplex_on	0.0001
+InitComplex_off	10
+
+# Pol II initiation rate
+Recruitment	1
+
+# Pause escape rate (once every 1s)
+PauseFactor_off	1
+
