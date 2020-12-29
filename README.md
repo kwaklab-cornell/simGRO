@@ -64,6 +64,7 @@ Arguments
 
 ### Preference file breakdown
 Default preference file at `default/pref.txt`
+
 ```
 # Default model
 ```
@@ -76,7 +77,7 @@ PostPolyALength	1800
 PromoterLength	200
 PauseSite	40
 ```
-Gene lengths and positions. Promoter starts at 0 bo, TSS is at 200 bp, pause site at 240 bp, and gene is 10 kb long, followed by 1800 bp flanking region.
+Gene lengths and positions. Labels are case insensitive, followed by a tab and the number in integers. Promoter starts at 0 bo, TSS is at 200 bp, pause site at 240 bp, and gene is 10 kb long, followed by 1800 bp flanking region.
 
 ```
 # Initiation rate limiting transcription factor occupancy parameters (once every 500s, stays for 20s)
@@ -84,4 +85,23 @@ Gene lengths and positions. Promoter starts at 0 bo, TSS is at 200 bp, pause sit
 TF_on	default/tf_on.txt
 TF_off	default/tf_off.txt
 ```
-Transcription factor binding and dissociation rates. 
+Parameter files defining transcription factor binding and dissociation rates. File name(default/tf_on.txt) follows the labels after a tab. Files are tab delimited table of 2 variable function, usually Pol II position on the x (column) and time on the y (row). TF binding is only time dependent, and has 1 column. Further parameter file breakdown on the next section. TF binding is the first rate limiting step, set to happen once every 500 seconds. TF binding is relatively dynamic, dissociating after the average of 20 seconds. Default values modeled after TATA Box binding protein (TBP).
+
+```
+# Pol II recruitment rate, rows are the function of time
+Recruitment	default/recruitment.txt
+```
+Pol II recruitment rate function. This is the non-rate limited intrinsic Pol II recruitment rate.
+
+```
+# Pausing factor parameters, function of time 
+PF_on	default/pf_on.txt
+PF_off	default/pf_off.txt
+```
+Pausing factor recruitment and escape rates. Once Pol II reaches the pausing site, fast PF_on rate captures Pol II. PF_off is the second rate limiting step.
+
+```
+# Elongation rate, function of position and activity
+Elongation	default/elongation.txt
+```
+Elongation speed normally 30 bp/sec. 
