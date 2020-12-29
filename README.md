@@ -38,5 +38,10 @@ Start running in terminal commandline. Need the 'gu' directory
 Right click to activate pop-up menu. Keyboard shotcut keys also available (ESC to quit).
 
 ## Introduction
-RNA polymerase II (Pol II) is a dynamic enzyme carrying out the key step of transcription. Transcription factors (TFs) bind to promoters to recruit Pol II, but Pol II pauses soon after initiating RNA synthesis. Paused Pol II escapes in productive elongation making nascent RNA, until the RNA is cleaved and Pdl II is terminated. The on and off rates of TFs and pausing factors, Pol II elongation speed and termination rates shape the landscape of Pol II traversing on a gene. How these steps dictate the activity of RNA synthesis has been the major focus of the studies of transcription mechanisms.
+Transcription is a dynamic process. On and off rates of transcription factor (TF) binding, RNA polymerase II (Pol II) pausing and elongation, nascent RNA cleavage and termination shape the landscape of Pol II traversing on a gene and dictate the amount of RNA production. Through simulating Pol II dynamics, the following questions will be addressed.
+1. Determine the effect of each step, in particular the pausing escape step.
+2. Devise experimental parameters that accurately reflect each step of transcription.
+3. Train a deep learning machine that determines which step is regulated in a gene.
+
+
 
