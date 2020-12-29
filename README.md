@@ -249,4 +249,4 @@ Pol II do not need to saturate at the pause site to be rate-limiting the product
 Dynamic modeling of Pol II elongation wave (Jonkers et al, eLife, 2014).
 
 ## Exercise 3
-Generate training sets of simulated Pol II profiles of the change in initiation rates or the pause-escape rates. Use these sets to evaluate the perfomance of experimental parameters. Develop a deep learning machine that can tell if a gene is regulated at the initiation or the pause-escape steps across cell types. Discover underlying sequence elements that direct intiation driven vs pause-escape driven promoter regulations.
+Generate training sets of simulated Pol II profiles of the change in initiation rates or the pause-escape rates. Use these sets to evaluate the perfomance of experimental parameters. Develop a deep learning machine that can tell if a gene is regulated at the initiation or the pause-escape steps across cell types. Discover underlying sequence elements and TFs that differentiate intiation regulated vs pause-escape regulated promoter.
