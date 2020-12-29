@@ -104,4 +104,47 @@ Pausing factor recruitment and escape rates. Once Pol II reaches the pausing sit
 # Elongation rate, function of position and activity
 Elongation	default/elongation.txt
 ```
-Elongation speed normally 30 bp/sec. 
+Elongation speed set at 30 bp/sec constant. Elongation speed can be defined at different rates depending on positions (columns). Pol II 'activity' is an intrinsic property of the activity of Pol II molecule (such as Ser2 phosphorylation, on rows) that can affect the speed.
+
+```
+# RNA cleavage rate (polyA), by position and activity
+Cleavage	default/cleavage.txt
+```
+Cleavage polyadenylation rate, dependent on the position. Is 0 on the gene body up to 10 kb (+200 bp), and goes up after the PAS. Can further be set to be dependent on Pol II activity.
+
+```
+# Post-cleavage elongation rate, function of position and activity
+PostPA	default/postpa.txt
+```
+Post-poly(A) elongation rate, set at 10 bp/sec. Post-poly(A) rate applies only after the RNA cleavage event. 
+
+```
+# Termination rate, function of position and activity
+Termination	default/term.txt
+```
+Termination rate. Note that the default cleavage, postPA elongation, and termination rates are arbitrary values to recapitulate typical post-PAS transcription profiles and not affect gene body profiles.
+
+```
+# Pol II initial activity distribution (scale of 1 to 100, function of time)
+Activity	default/activity.txt
+```
+Pol II activity definition. Currently not used, and all Pol II have 100% activity. Reserved to model activity dependent Pol II behaviors.
+
+```
+# Recording timepoints (seconds)
+Record	default/record.txt
+```
+File containing simulated profile recording timepoints. Default recording at 0 sec and 60 sec.
+
+```
+# DNA copies to simulate
+Copies	2000
+```
+Number of DNA template to simulate. Can be adjusted to your system performance and simulation depth.
+
+```
+# End of preference definition
+```
+End
+
+### Parameter file breakdown
