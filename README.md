@@ -243,7 +243,7 @@ The paramters are constant values in GROgu, rather than multivariable functions 
 
 
 ## Exercise 1
-Pol II do not need to saturate at the pause site to be rate-limiting the productive elongation.
+Pol II far less saturated at the pause site can still be rate-limiting the productive elongation.
 
 ## Exercise 2
 Dynamic modeling of Pol II elongation wave (Jonkers et al, eLife, 2014).
