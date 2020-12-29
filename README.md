@@ -7,7 +7,7 @@ Monte Carlo simulation of RNA polymerase II pausing and elongation
 ### Download and install
 cd to your installation directory.
 ```
-git clone
+git clone https://github.com/h-kwak/simGRO.git
 cd simGRO
 make
 ```
@@ -194,5 +194,50 @@ GROgu is a GUI version of simGRO. The difference from simGRO is that GROgu use c
 ./GROgu <preference file(optional)>
 ```
 Without specifying the preference file, GROgu will use `gu/pref.txt`.
+The graphical simulation will start. Right click to start a pop-up menu. Details on the commands will be updated.
+Usefull hotkeys are
+- ESC: quit
+- Number keys: shift to conditions set on preference file.
+Also shift between different conditions through the pop-up menu.
 
 ### preference file
+```
+7
+hsp70 NHS
+hsp70 HS
+Class 2 low esc
+Class 2 high esc
+Class 1
+Class 4
+Fast TBP dynamics
+gu/par.hsp70NHS.txt
+gu/par.hsp70HS.txt
+gu/par.class2LowEsc.txt
+gu/par.class2HighEsc.txt
+gu/par.class1.txt
+gu/par.class4.txt
+gu/par.fastTBP.txt
+```
+First line is the number of parameter sets (7 in this case). Each set represents a condition.
+Next 7 are the description texts of the conditions. Then the list of parameter files follow.
+
+### parameter files
+A parameter file simulating hsp70 gene under non-heatshock condition is at `gu/par.hsp70NHS.txt`.
+```
+# Hsp70-like gene BEFORE heat shock
+
+# Initiation complex occupancy parameters (once every 500s, stays for 20s)
+InitComplex_on	0.002
+InitComplex_off	0.05
+
+# Pol II initiation rate
+Recruitment	1
+
+# Pause escape rate (once every 500s)
+PauseFactor_off	0.002
+
+PostPA-Elongation	15
+Termination	0.2
+```
+The paramters are constant values in GROgu, rather than multivariable functions in simGRO.
+
