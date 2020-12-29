@@ -145,6 +145,11 @@ Number of DNA template to simulate. Can be adjusted to your system performance a
 ```
 # End of preference definition
 ```
-End
 
 ### Parameter file breakdown
+TF`default/tf_on.txt`
+```
+TFon_R)time	 0
+0            0.002
+600          0.002
+```
