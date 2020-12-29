@@ -8,6 +8,7 @@ postPolyALength	= 1800
 promoterLength = 200
 pauseSite = 40
 resultFile = "result/default.result.txt"
+outFile = "result/default.result.pdf"
 
 # Read result file
 res = read.table(resultFile,
@@ -20,7 +21,7 @@ res100 = res %>%
 	summarize(count = sum(count))
 
 # Plot
-pdf("result/default.plot.pdf", width = 6, height = 4)
+pdf(outFile, width = 6, height = 4)
 ggplot(data = res100, aes(x = pos, y = count)) +
 	geom_bar(stat = "identity", aes(fill = time)) +
 	facet_grid(time ~ .)
