@@ -55,4 +55,10 @@ Arguments
 -b      :       Bin size (default=10)
 -r      :       Simulation resolution (default=50 ms)
 ```
+- Preference file: file containing gene parameters and kinetic constants. Further breakdown on the next section.
+- Output file: tab delimited file of recording time, start position, end position, read count per DNA copy in long format dataframe. Use the 'plotGRO.R' R script to produce plot a profile.
+- Equillibrium time: time needed to reach equillibrium of Pol II on the gene. Generally, 4x longest half life of the bindings constants or genelength divided by elongation rate, whichever is greater.
+- Equillibirum speed: factor of equillibration speed relative to the main simulation. Equillibration can approximated and ran faster.
+- Bin size: size of read count bins in the output file in base pairs.  
+- Simulation resolution: delta T per each simulation cycle. Note that simGRO uses pre-calculated poisson time function for transcription events, and can handle relatively long delta T. This speeds up the simulation while maintaining accuracy.
 
