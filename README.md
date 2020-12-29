@@ -25,3 +25,4 @@ Run plotGRO.R script to generate the plot of the simulated result.
 ```
 Rscript plotGRO.R
 ````
+![alt txt](https://github.com/h-kwak/simGRO/blob/main/result/default.plot.PNG)
