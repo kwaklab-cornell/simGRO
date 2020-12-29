@@ -12,3 +12,17 @@ cd simGRO
 make
 ```
 Ignore all warning messages.
+Makes two executable files.
+- simGRO : command line GRO-seq simulator
+- GROgu : GRO-seq simulator graphical UIed.
+
+### simGRO
+Run simGRO
+```
+./simGRO -p default/pref.txt -o result/default.result.txt
+```
+This generates a simulated read data file.
+Run plotGRO.R script to generate a plot.
+```
+Rscript plotGRO.R
+````
