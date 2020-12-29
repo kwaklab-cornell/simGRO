@@ -29,7 +29,9 @@ Rscript plotGRO.R
 
 ### GROgu
 GUI version of simGRO. Only works in Mac OS X.
-Start running in terminal commandline. Need the 'gu' directoru
+Start running in terminal commandline. Need the 'gu' directory
 ```
 ./GROgu
 ```
+![alt txt](https://github.com/h-kwak/simGRO/blob/main/gu/gu.capture.PNG)
+Right click to activate pop-up menu. Keyboard shotcut keys also available (ESC to quit).
