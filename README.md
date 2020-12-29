@@ -43,5 +43,16 @@ Transcription is a dynamic process. On and off rates of transcription factor (TF
 2. Devise experimental parameters that accurately reflect each step of transcription.
 3. Train a deep learning machine that determines which step is regulated in a gene.
 
+## SimGRO
 
+### Usage
+```
+Arguments
+-p      :       Preference file name
+-o      :       Output file name
+-e      :       Equillibrium time (default=600s)
+-s      :       Equillibrium speed (default=5x)
+-b      :       Bin size (default=10)
+-r      :       Simulation resolution (default=50 ms)
+```
 
