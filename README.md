@@ -62,3 +62,26 @@ Arguments
 - Bin size: size of read count bins in the output file in base pairs.  
 - Simulation resolution: delta T per each simulation cycle. Note that simGRO uses pre-calculated poisson time function for transcription events, and can handle relatively long delta T. This speeds up the simulation while maintaining accuracy.
 
+### Preference file breakdown
+Default preference file at `default/pref.txt`
+```
+# Default model
+```
+Lines starting with hash(#) are for annotation purposes
+
+```
+# Gene length and positions
+GeneLength	10000
+PostPolyALength	1800
+PromoterLength	200
+PauseSite	40
+```
+Gene lengths and positions. Promoter starts at 0 bo, TSS is at 200 bp, pause site at 240 bp, and gene is 10 kb long, followed by 1800 bp flanking region.
+
+```
+# Initiation rate limiting transcription factor occupancy parameters (once every 500s, stays for 20s)
+# Rows are the function of time
+TF_on	default/tf_on.txt
+TF_off	default/tf_off.txt
+```
+Transcription factor binding and dissociation rates. 
