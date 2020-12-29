@@ -143,7 +143,7 @@ void ResetSimGRO()
 void InitSimGRO(char *pref_file, char *recordFileName)
 {
 	//cerr<<"Initializing"<<endl;
-	ResetSimGRO();
+	//ResetSimGRO();
 	//cerr<<"Constants initialized"<<endl;
 	ResetSimGRO(pref_file);
 	//cerr<<"Constants loaded"<<endl;
@@ -328,7 +328,7 @@ void Pol2stat::Init()
 	for(int i=0;i<N_POL2STATUS;i++) Status[i] = 0;
 	Status[ELONGATING]=1;
 	Status[POL2AGE]=1;
-	Activity = ActivityDistribution.StateChange(999, 0, simTime);
+	Activity = ActivityDistribution.StateChange(200, 0, simTime/1000)*5;
 }
 
 void Pol2stat::Elongate(int delta_t, int *Factor_occupancy)
@@ -404,7 +404,7 @@ int Pol2stat::CheckCleavage(int delta_t)
         if(PA_Cleavage.StateChange(delta_t, Position, Activity))
         {
             Status[POSTPOLYA]=1;
-            return 1;
+			return 1;
         }
     }
     return 0;
@@ -432,11 +432,11 @@ void DNAstat::CheckIC(int delta_t)
 	// TBP bound state
 	if(Promoter_status[IC]<=0)		// if IC is not bound
 	{
-		if(IC_on.StateChange(delta_t, 0, simTime)) Promoter_status[IC]=1;
+		if(IC_on.StateChange(delta_t, 0, (int)(simTime/1000))) Promoter_status[IC]=1;
 	}
 	else		// IC bound
 	{
-		if(IC_off.StateChange(delta_t, 0, simTime)) Promoter_status[IC]=-8;
+		if(IC_off.StateChange(delta_t, 0, (int)(simTime/1000))) Promoter_status[IC]=-8;
 	}
 }
 
@@ -448,7 +448,7 @@ void DNAstat::Progress(int delta_t)
 	int pol2_clear=1;
 	for(int i=TSSPOS;i<=PAUSESITE;i++) if(Factor_occupancy[i]&POL2) pol2_clear=0;
 	if(Promoter_status[IC]>0&&pol2_clear)		// IC bound and No Pol2 at promoter
-		if(Recruitment.StateChange(delta_t, 0, simTime))
+		if(Recruitment.StateChange(delta_t, 0, (int)(simTime/1000)))
 		{
 			Pol2stat newpol2;
 			newpol2.Init();
@@ -562,10 +562,11 @@ int StateFunction::StateChange(int delta_t)
 void StateFunctionOf::Init(float st, char *filename)
 {
 	if(filename) {
-		step = st;
 		rateFunc.Init(filename);
 		min = rateFunc.min;
 		max = rateFunc.max;
+		if(min == max) step = 1;
+		else step = (max - min)/st;
 		int n=(int)((max-min)/step)+1;
 		stateFunc.resize(n);
 		for(int i=0;i<n;i++)
@@ -577,8 +578,9 @@ void StateFunctionOf::Init(float st, char *filename)
 	else {
 		min = st/5;
 		max = st*2;
-		step = 100;
+		step = (max - min)/100;
 		int n=(int)((max-min)/step)+1;
+		cerr<<n<<endl;
 		stateFunc.resize(n);
 		for(int i=0;i<n;i++)
 		{
