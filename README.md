@@ -219,7 +219,7 @@ gu/par.class4.txt
 gu/par.fastTBP.txt
 ```
 First line is the number of parameter sets (7 in this case). Each set represents a condition.
-Next 7 are the description texts of the conditions. Then the list of parameter files follow.
+Next 7 are the description texts of the conditions. Then the list of parameter files follow. You can assign any other file as long as it follows the parameter file format in the next section.
 
 ### parameter files
 A parameter file simulating hsp70 gene under non-heatshock condition is at `gu/par.hsp70NHS.txt`.
