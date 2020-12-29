@@ -2,7 +2,7 @@
 Monte Carlo simulation of RNA polymerase II pausing and elongation
 
 ## Quickstart
-- Disclaimer: this only works in Mac OS X. Kept getting seg faults in ubuntu. Can't figure out why.
+- Disclaimer: this only works in Mac OS X. Kept getting seg faults in ubuntu.
 
 ### Download and install
 cd to your installation directory.
@@ -38,3 +38,5 @@ Start running in terminal commandline. Need the 'gu' directory
 Right click to activate pop-up menu. Keyboard shotcut keys also available (ESC to quit).
 
 ## Introduction
+RNA polymerase II (Pol II) is a dynamic enzyme carrying out the key step in transcription. Transcription factors (TFs) bound to promoters recruit Pol II, but Pol II pauses soon after initiating RNA synthesis. Paused Pol II escapes to productive elongation making nascent RNA molecules, until the RNA is cleaved and Pol II is terminated. The on and off rates of TFs and pausing factors, as well as Pol II elongation speed and termination rates shape the overall Pol II landscape on a gene. How these steps dictate the activity of RNA synthesis has been the major focus of the studies of transcription mechanisms.
+
