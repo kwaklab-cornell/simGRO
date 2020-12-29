@@ -68,7 +68,7 @@ Default preference file at `default/pref.txt`
 ```
 # Default model
 ```
-Lines starting with hash(#) are for annotation purposes
+Lines starting with the hash (#) are for annotation purposes
 
 ```
 # Gene length and positions
@@ -174,4 +174,25 @@ CleavageRate_C)pos:R)activity  0   10199   10200   12000
 ```
 Cleavage rate is also defined similarly. Note that there is an abrupt increase from 0 between 10199 and 10200. Cleavage and termination constants are set up arbitrarily to match a typical post-PAS Pol II distribution.
 
+### plotGRO.R
+Change the following part to match your result file, and run `Rscript plotGRO.R` to generate the plots.
+```
+# Simulation information
+geneLength = 10000
+postPolyALength	= 1800
+promoterLength = 200
+pauseSite = 40
+resultFile = "result/default.result.txt"
+outFile = "result/default.result.pdf"
+```
 
+## GROgu
+GROgu is a GUI version of simGRO. The difference from simGRO is that GROgu use constant rate, easier to edit the parameter files for simpler illustrative purposes. 
+
+### Usage
+```
+./GROgu <preference file(optional)>
+```
+Without specifying the preference file, GROgu will use `gu/pref.txt`.
+
+### preference file
