@@ -77,7 +77,7 @@ PostPolyALength	1800
 PromoterLength	200
 PauseSite	40
 ```
-Gene lengths and positions. Labels are case insensitive, followed by a tab and the number in integers. Promoter starts at 0 bo, TSS is at 200 bp, pause site at 240 bp, and gene is 10 kb long, followed by 1800 bp flanking region.
+Gene lengths and positions. Labels are case insensitive, followed by a tab and the number in integers. Promoter starts at 0 bp, TSS is at 200 bp, pause site at 240 bp, and gene is 10 kb long, followed by 1800 bp flanking region.
 
 ```
 # Initiation rate limiting transcription factor occupancy parameters (once every 500s, stays for 20s)
@@ -147,9 +147,31 @@ Number of DNA template to simulate. Can be adjusted to your system performance a
 ```
 
 ### Parameter file breakdown
-TF`default/tf_on.txt`
+TF binding parameters at `default/tf_on.txt`. (Note that the tabs are expanded here)
 ```
 TFon_R)time	 0
 0            0.002
 600          0.002
 ```
+First line is a header of x paramters. TF binding is not dependent on Pol II position (x), and only one value of 0.
+Rows are the y parameter values (time), followed by the TF binding rate constant (per second). Rate constant of 0.002 is once every 500 seconds.
+This was set to be independent of time, but can be adjusted to model dynamic changes.
+- TF_off, PF_on, PF_off parameter files follow the same rule.
+
+Elongation rate parameters at `default/elongation.txt`.
+```
+ElongationRate_C)distance:R)activity  0    10000
+0                                     30   30	
+100                                   30   30
+```
+Elongation rate is a two variable function (Pol II position on the x column, and Pol II activity on the y row). Default is set at 30 bp/second, but can be varied. Values are interpolated and extrapolated linearly.
+
+Cleavage rate parameters at `default/cleavage.txt`.
+```
+CleavageRate_C)pos:R)activity  0   10199   10200   12000
+0                              0   0       0.05    0.05
+100                            0   0       0.05    0.05
+```
+Cleavage rate is also defined similarly. Note that there is an abrupt increase from 0 between 10199 and 10200. Cleavage and termination constants are set up arbitrarily to match a typical post-PAS Pol II distribution.
+
+
