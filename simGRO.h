@@ -310,16 +310,14 @@ void Print(int time, int interval, int bin)
 	if(currentRecord<countRecord) 
 	if(simTime/1000>RecordTime[currentRecord])
 	{
-		recordFile<<RecordTime[currentRecord]<<"_second";
 		float binsum = 0;
 		for(int i=0;i<DNALEN;i++) {
 			binsum += Metagene[i];
 			if(i%bin == bin-1) {
-				recordFile<<"\t"<<binsum;
+				recordFile<<RecordTime[currentRecord]<<"\t"<<i-bin+1<<"\t"<<i<<"\t"<<binsum<<endl;
 				binsum = 0;
 			}
 		}
-		recordFile<<endl;
 		currentRecord++;
 	}
 }
