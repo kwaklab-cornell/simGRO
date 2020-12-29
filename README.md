@@ -21,8 +21,7 @@ Run simGRO
 ```
 ./simGRO -p default/pref.txt -o result/default.result.txt
 ```
-This generates a simulated read data file.
-Run plotGRO.R script to generate a plot.
+Run plotGRO.R script to generate the plot of the simulated result.
 ```
 Rscript plotGRO.R
 ````
