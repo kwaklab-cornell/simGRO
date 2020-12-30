@@ -248,11 +248,14 @@ Regardless of the pause occupancy level, Pol II pausing regulate productive elon
 Transcription intiation was long assumed to be the rate limiting step of RNA synthesis. Pol II pausing recently emerged as another rate limiting step. Determining which is the limiting step of a gene becomes important, since each involves different factors. 
 
 ### Snapshot
-Class 2 genes (active and paused genes)
+Class 2 genes (active and paused genes) in GROgu default pref.
 - Low escape from pause
 ![alt txt](https://github.com/h-kwak/simGRO/blob/main/gu/gu.c2le.PNG)
 - High escape from pause
 ![alt txt](https://github.com/h-kwak/simGRO/blob/main/gu/gu.c2he.PNG)
+
+### Simulation
+
 
 ## Exercise 2
 Dynamic modeling of Pol II elongation wave (Jonkers et al, eLife, 2014).
