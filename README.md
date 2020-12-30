@@ -243,7 +243,11 @@ The paramters are constant values in GROgu, rather than multivariable functions 
 
 
 ## Exercise 1
-Pol II far less saturated at the pause site can still be rate-limiting the productive elongation.
+Regardless of the pause occupancy level, Pol II pausing regulate productive elongation by limiting transcriptional bursting.
+
+For decades, transcription intiation was assumed to be the rate limiting step of RNA synthesis. More recently, Pol II pausing has emerged to be another rate limiting step. Determining which is the major limiting step for a gene becomes important, since different factors play roles in controlling each step.
+
+
 
 ## Exercise 2
 Dynamic modeling of Pol II elongation wave (Jonkers et al, eLife, 2014).
