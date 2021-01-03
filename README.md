@@ -279,18 +279,18 @@ while(true) {
     save.params(par, "sample/ex1/pars.txt")
 }
 ````
-Function jetpack randomly samples the tf_on, tf_off, and rec parameters, and run simGRO under 3 different pause ecape rates (once 5s, 12.5s, 50s: simGRO preference files are pref.he.txt, pref.me.txt, pref.le.txt). Run until the sampling saturates the parameter space (unlikely) or time permits. Results are saved in the sample/ex1/result directory.
+Function jetpack randomly samples the tf_on, tf_off, and rec parameters, and run simGRO under 3 different pause ecape rates (once every 5s, 12.5s, 50s: simGRO preference files are pref.he.txt, pref.me.txt, pref.le.txt). Run until the sampling saturates the parameter space (unlikely) or time permits. Results are saved in the sample/ex1/result directory.
 
 After (or during) the run, retrieve randomized parameters and simulated read densities
 ```
 data = grep.data("sample/ex1/pars.txt")
 ```
 We will measure fold change in gene body density from low to high escape rate change. This is the column data$GBfc.
-Generate 3 variable (tf_on, tf_off, recruitment) plots showing GBfc, pause site density in low (PP_LE) and high escapes (PP_HE).
+Generate 3 variable (tf_on, tf_off, recruitment) plots showing GBfc, pause site density in low (LE_PP) and high escapes (HE_PP).
 ```
 plot.data(data, var = "GBfc", file = "sample/ex1/GBfc.pdf")
-plot.data(data, var = "PP_LE", file = "sample/ex1/PPle.pdf")
-plot.data(data, var = "PP_HE", file = "sample/ex1/PPhe.pdf")
+plot.data(data, var = "LE_PP", file = "sample/ex1/PPle.pdf")
+plot.data(data, var = "HE_PP", file = "sample/ex1/PPhe.pdf")
 ```
 
 
