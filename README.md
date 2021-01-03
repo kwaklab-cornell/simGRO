@@ -254,7 +254,7 @@ Class 2 genes (active and paused genes) in GROgu default pref.
 - High escape from pause
 ![alt txt](https://github.com/h-kwak/simGRO/blob/main/gu/gu.c2he.PNG)
 
-Gene body density is apparently higher in high escape.
+Gene body density is apparently higher in high escape, while other parameters are the same and pause site occupancy in low escape is ~6%.
 
 ### Simulation
 Run R console (or Rstudio), and load
