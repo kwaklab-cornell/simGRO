@@ -245,7 +245,7 @@ The paramters are constant values in GROgu, rather than multivariable functions 
 ## Exercise 1
 Regardless of the pause occupancy level, Pol II pausing regulate productive elongation by limiting transcriptional bursting.
 
-Transcription intiation was long assumed to be the rate limiting step of RNA synthesis. Pol II pausing recently emerged as another rate limiting step. Determining which is the limiting step of a gene becomes important, since each involves different factors. 
+Transcription intiation was long assumed to be the rate limiting step of RNA synthesis. Pol II pausing recently emerged as another rate limiting step. Determining which is the limiting step of a gene becomes important, since each involves different factors. We will simulate the condisions where changing the pause escape from low to high (and other parameters remain the same) result in increased gene body Pol II densities.  
 
 ### Snapshot
 Class 2 genes (active and paused genes) in GROgu default pref.
@@ -253,8 +253,45 @@ Class 2 genes (active and paused genes) in GROgu default pref.
 ![alt txt](https://github.com/h-kwak/simGRO/blob/main/gu/gu.c2le.PNG)
 - High escape from pause
 ![alt txt](https://github.com/h-kwak/simGRO/blob/main/gu/gu.c2he.PNG)
+Gene body densities apparently are higher in high escape.
 
 ### Simulation
+Run R console (or Rstudio), and load
+```
+source("beskar.R")
+```
+
+Set limits for the TF_on, TF_off, and PIC recruitment paramaters
+```
+par.lim = matrix(log10(c(0.0002, 1,              # TF_on limits: 1 sec to ~1 hr
+                         0.005, 0.5,             # TF_off limits: 2 sec to ~3 min
+                         0.01, 1)),              # PIC recruitment rate: 1 sec to ~1.5 min
+                 ncol = 3,
+                 dimnames = list(c("min", "max"),
+                                 c("tf_on", "tf_off", "rec")))
+```
+
+Shotgun strategy to cover the parameter limits by iterative random sampling. 
+```
+par = NULL
+while(true) {
+    par = jetpack(par, par.lim)
+    save.params(par, "sample/ex1/pars.txt")
+}
+````
+Function jetpack randomly samples the tf_on, tf_off, and rec parameters, and run simGRO under 3 different pause ecape rates (once 5s, 12.5s, 50s: simGRO preference files are pref.he.txt, pref.me.txt, pref.le.txt). Run until the sampling saturates the parameter space (unlikely) or time permits. Results are saved in the sample/ex1/result directory.
+
+After (or during) the run, retrieve randomized parameters and simulated read densities
+```
+data = grep.data("sample/ex1/pars.txt")
+```
+We will measure fold change in gene body density from low to high escape rate change. This is the column data$GBfc.
+Generate 3 variable (tf_on, tf_off, recruitment) plots showing GBfc, pause site density in low (PP_LE) and high escapes (PP_HE).
+```
+plot.data(data, var = "GBfc", file = "sample/ex1/GBfc.pdf")
+plot.data(data, var = "PP_LE", file = "sample/ex1/PPle.pdf")
+plot.data(data, var = "PP_HE", file = "sample/ex1/PPhe.pdf")
+```
 
 
 ## Exercise 2
