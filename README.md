@@ -253,7 +253,8 @@ Class 2 genes (active and paused genes) in GROgu default pref.
 ![alt txt](https://github.com/h-kwak/simGRO/blob/main/gu/gu.c2le.PNG)
 - High escape from pause
 ![alt txt](https://github.com/h-kwak/simGRO/blob/main/gu/gu.c2he.PNG)
-Gene body densities apparently are higher in high escape.
+
+Gene body density is apparently higher in high escape.
 
 ### Simulation
 Run R console (or Rstudio), and load
@@ -286,12 +287,13 @@ After (or during) the run, retrieve randomized parameters and simulated read den
 data = grep.data("sample/ex1/pars.txt")
 ```
 We will measure fold change in gene body density from low to high escape rate change. This is the column data$GBfc.
-Generate 3 variable (tf_on, tf_off, recruitment) plots showing GBfc, pause site density in low (LE_PP) and high escapes (HE_PP).
+Generate 3 variable (tf_on, tf_off, recruitment) plots showing GBfc, pause site density in low escape (LE_PP).
 ```
 plot.data(data, var = "GBfc", file = "sample/ex1/GBfc.pdf")
 plot.data(data, var = "LE_PP", file = "sample/ex1/PPle.pdf")
-plot.data(data, var = "HE_PP", file = "sample/ex1/PPhe.pdf")
 ```
+[!alt txt]()
+[!alt txt]()
 
 
 ## Exercise 2
