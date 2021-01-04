@@ -245,7 +245,7 @@ The paramters are constant values in GROgu, rather than multivariable functions 
 ## Exercise 1
 Regardless of the pause occupancy level, Pol II pausing regulate productive elongation by limiting transcriptional bursting.
 
-Transcription intiation was long assumed to be the rate limiting step of RNA synthesis. Pol II pausing recently emerged as another rate limiting step. Determining which is the limiting step of a gene becomes important, since each involves different factors. We will simulate the condisions where changing the pause escape from low to high (and other parameters remain the same) result in increased gene body Pol II densities.  
+Transcription intiation was long assumed to be the rate limiting step of RNA synthesis. Pol II pausing recently emerged as another rate limiting step. Determining which is the limiting step of a gene becomes important, since each involves different factors. There has been arguments that if initiation is rate-limiting, pause escape does not affect transcription output unless the pause site is fully occupied. We will simulate the condisions where changing the pause escape from low to high (and other parameters remain the same) result in increased gene body Pol II densities regardless of pause occupancy.  
 
 ### Snapshot
 Class 2 genes (active and paused genes) in GROgu default pref.
