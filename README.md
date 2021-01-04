@@ -293,9 +293,9 @@ plot.data(data, var = "GBfc", file = "sample/ex1/GBfc.pdf")
 plot.data(data, var = "LE_PP", file = "sample/ex1/PPle.pdf")
 ```
 Gene body fold change
-[!alt txt](https://github.com/h-kwak/simGRO/blob/main/result/GBfc.png)
+![alt txt](https://github.com/h-kwak/simGRO/blob/main/result/GBfc.png)
 Pause occupancy
-[!alt txt](https://github.com/h-kwak/simGRO/blob/main/result/PPle.png)
+![alt txt](https://github.com/h-kwak/simGRO/blob/main/result/PPle.png)
 
 
 ## Exercise 2
