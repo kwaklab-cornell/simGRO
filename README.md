@@ -91,7 +91,7 @@ Parameter files defining transcription factor binding and dissociation rates. Fi
 # Pol II recruitment rate, rows are the function of time
 Recruitment	default/recruitment.txt
 ```
-Pol II recruitment rate function. This is the non-rate limited intrinsic Pol II recruitment rate.
+Pol II recruitment rate function. This is the non-rate limited intrinsic Pol II recruitment rate, but can still affect transcriptional output. Reflects local concentration of PIC components, possibly driven by nuclear phase condensates (transcription bodies/compartments).
 
 ```
 # Pausing factor parameters, function of time 
