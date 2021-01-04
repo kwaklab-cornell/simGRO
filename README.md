@@ -292,8 +292,10 @@ Generate 3 variable (tf_on, tf_off, recruitment) plots showing GBfc, pause site 
 plot.data(data, var = "GBfc", file = "sample/ex1/GBfc.pdf")
 plot.data(data, var = "LE_PP", file = "sample/ex1/PPle.pdf")
 ```
-[!alt txt]()
-[!alt txt]()
+Gene body fold change
+[!alt txt](https://github.com/h-kwak/simGRO/blob/main/result/GBfc.png)
+Pause occupancy
+[!alt txt](https://github.com/h-kwak/simGRO/blob/main/result/PPle.png)
 
 
 ## Exercise 2
