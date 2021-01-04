@@ -297,6 +297,8 @@ Gene body fold change
 Pause occupancy
 ![alt txt](https://github.com/h-kwak/simGRO/blob/main/result/PPle.png)
 
+Gene body fold change in simulation points with the promoter occupancy less than 0.2
+![alt txt](https://github.com/h-kwak/simGRO/blob/main/result/GBfc_Page_2.png)
 
 ## Exercise 2
 Dynamic modeling of Pol II elongation wave (see Jonkers, Kwak, & Lis, eLife, 2014).
