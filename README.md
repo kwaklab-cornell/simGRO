@@ -303,5 +303,22 @@ Gene body fold change in simulation points with pause site occupancy less than 0
 ## Exercise 2
 Dynamic modeling of Pol II elongation wave (see Jonkers, Kwak, & Lis, eLife, 2014).
 
+Run simulation with dynamic pause escape rate and position dependent elongation rates.
+Pause escape rate `pf_off.txt`
+```
+PauseOff_R)time  0    
+0                0.05             
+30               0.001 
+```
+Elongation rate `elongation.txt`
+```
+ElongationRate_C)distance:R)activity  0   5000  10000  20000  30000 
+0                                     10  15    20     25     30   
+100                                   10  15    20     25     30 
+```
+Gene length is set to 30 kb.
+
+![alt txt](https://github.com/h-kwak/simGRO/blob/main/result/FP.plot.png)
+
 ## Exercise 3
 Generate training sets of simulated Pol II profiles of the change in initiation rates or the pause-escape rates. Use these sets to evaluate the perfomance of experimental parameters. Develop a deep learning machine that can tell if a gene is regulated at the initiation or the pause-escape steps across cell types. Discover underlying sequence elements and TFs that differentiate intiation regulated vs pause-escape regulated promoter.
