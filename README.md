@@ -318,7 +318,7 @@ ElongationRate_C)distance:R)activity  0   5000  10000  20000  30000
 ```
 Gene length is set to 30 kb.
 
-![alt txt](https://github.com/h-kwak/simGRO/blob/main/result/FP.plot.png)
+![alt txt](https://github.com/h-kwak/simGRO/blob/main/result/FP.plot.PNG)
 
 ## Exercise 3
 Generate training sets of simulated Pol II profiles of the change in initiation rates or the pause-escape rates. Use these sets to evaluate the perfomance of experimental parameters. Develop a deep learning machine that can tell if a gene is regulated at the initiation or the pause-escape steps across cell types. Discover underlying sequence elements and TFs that differentiate intiation regulated vs pause-escape regulated promoter.
