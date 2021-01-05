@@ -101,6 +101,12 @@ PF_off	default/pf_off.txt
 Pausing factor recruitment and escape rates. Once Pol II reaches the pausing site, fast PF_on rate captures Pol II. PF_off is the second rate limiting step.
 
 ```
+# Pause site termination rate, function of time
+PS_term	default/ps_term.txt
+```
+Pause site termination rate. Paused Pol II can terminate after prolonged stalling.
+
+```
 # Elongation rate, function of position and activity
 Elongation	default/elongation.txt
 ```
