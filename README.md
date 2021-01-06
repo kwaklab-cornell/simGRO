@@ -281,7 +281,7 @@ par.lim = matrix(log10(c(0.0002, 1,              # TF_on limits: 1 sec to ~1 hr
 Shotgun strategy to cover the parameter limits by iterative random sampling. 
 ```
 par = NULL
-while(true) {
+while(TRUE) {
     par = jetpack(par, par.lim)
     save.params(par, "sample/ex1/pars.txt")
 }
