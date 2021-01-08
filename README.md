@@ -345,8 +345,14 @@ par.lim4 = matrix(log10(c(  0.0002, 1,      # TF_on limits: 1 sec to ~1 hr
 Start iterative simulation cycles
 ```
 par = NULL
-while(true) {
+while(TRUE) {
   par = razorcrest(par, par.lim4);
   save.params(par, "sample/ex3/param4.txt");
 }
 ```
+
+Plot of one of the simulated pairs 
+tf_on: 0.0264690255404292 -> 0.685499322019805
+tf_off: 0.0277339119503271
+rec: 0.085225080859726
+pf_off: 0.0100378282007281
