@@ -329,6 +329,7 @@ Gene length is set to 30 kb.
 ## Exercise 3
 Generate training sets of simulated Pol II profiles of the change in initiation rates or the pause-escape rates. Use these sets to evaluate the perfomance of experimental parameters. Develop a deep learning machine that can tell if a gene is regulated at the initiation or the pause-escape steps across cell types. Discover underlying sequence elements and TFs that differentiate intiation regulated vs pause-escape regulated promoter.
 
+### Generate simulated data
 On R console, load `source("beskar.R")`
 
 Setting limits for the randomized paramters.
@@ -359,4 +360,14 @@ Plot of one of the simulated pairs: in this example example, tf_on rate was alte
 * pf_off: 0.0100378282007281
 ![alt txt](https://github.com/h-kwak/simGRO/blob/main/result/sim.cap.png)
 
+Retrieve simulated data and calculate pause site occupancy and gene body density.
+```
+sim.data = read.razr("sample/ex3/param4.txt");
+write.table(sim.data, "data.txt", quote = F, row.names = F, sep = "\t");
+```
 
+### Train a deep learning machine
+Process the simulated data into training sets, for example FANN (http://leenissen.dk/fann/wp/). Would like to try Tensoflow for advanced features, but FANN works for now.
+Scripts under the directory `ann/`
+
+On R console, run `
