@@ -351,10 +351,12 @@ while(TRUE) {
 }
 ```
 
-Plot of one of the simulated pairs
+Simulated profiles are under `sample/ex3/result/`
+Plot of one of the simulated pairs: in this example example, tf_on rate was altered > 4 fold.
 * tf_on: 0.0264690255404292 -> 0.685499322019805
 * tf_off: 0.0277339119503271
 * rec: 0.085225080859726
 * pf_off: 0.0100378282007281
-
 ![alt txt](https://github.com/h-kwak/simGRO/blob/main/result/sim.cap.png)
+
+
