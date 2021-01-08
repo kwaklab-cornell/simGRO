@@ -356,3 +356,5 @@ Plot of one of the simulated pairs
 * tf_off: 0.0277339119503271
 * rec: 0.085225080859726
 * pf_off: 0.0100378282007281
+
+![alt txt](https://github.com/h-kwak/simGRO/blob/main/result/sim.cap.PNG)
