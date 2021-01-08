@@ -357,4 +357,4 @@ Plot of one of the simulated pairs
 * rec: 0.085225080859726
 * pf_off: 0.0100378282007281
 
-![alt txt](https://github.com/h-kwak/simGRO/blob/main/result/sim.cap.PNG)
+![alt txt](https://github.com/h-kwak/simGRO/blob/main/result/sim.cap.png)
