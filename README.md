@@ -328,3 +328,25 @@ Gene length is set to 30 kb.
 
 ## Exercise 3
 Generate training sets of simulated Pol II profiles of the change in initiation rates or the pause-escape rates. Use these sets to evaluate the perfomance of experimental parameters. Develop a deep learning machine that can tell if a gene is regulated at the initiation or the pause-escape steps across cell types. Discover underlying sequence elements and TFs that differentiate intiation regulated vs pause-escape regulated promoter.
+
+On R console, load `source("beskar.R")`
+
+Setting limits for the randomized paramters.
+```
+par.lim4 = matrix(log10(c(  0.0002, 1,      # TF_on limits: 1 sec to ~1 hr
+                            0.005, 0.5,     # TF_off limits: 2 sec to ~3 min
+                            0.01, 1,        # PIC recruitment rate: 1 sec to 1.5 min
+                            0.005, 0.2)),   # Pause escape rate: 5 sec to 200 sec
+                    ncol = 4,
+                    dimnames = list(c("min", "max"),
+                                    c("tf_on", "tf_off", "rec", "pf_off")))
+```
+
+Start iterative simulation cycles
+```
+par = NULL
+while(true) {
+  par = razorcrest(par, par.lim4);
+  save.params(par, "sample/ex3/param4.txt");
+}
+```
