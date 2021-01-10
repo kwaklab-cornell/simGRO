@@ -379,7 +379,9 @@ Run `./simGRO_test simGRO.data simGRO.test.data 1 0.001` to train 1 state model 
 
 Also train 2, 3, or 4 state models.
 `./simGRO_test simGRO.2.data simGRO.2test.data 2 0.001`
+
 `./simGRO_test simGRO.3.data simGRO.3test.data 3 0.001`
+
 `./simGRO_test simGRO.4.data simGRO.4test.data 4 0.001`
 
 
