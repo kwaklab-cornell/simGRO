@@ -367,7 +367,7 @@ write.table(sim.data, "data.txt", quote = F, row.names = F, sep = "\t");
 ```
 
 ### Train deep learning models
-Process the simulated data into training sets, for example FANN (http://leenissen.dk/fann/wp/). Would like to try Tensoflow for advanced features, but FANN works for now.
+Process the simulated data into training sets, for example FANN (http://leenissen.dk/fann/wp/). Can further apply Tensoflow for advanced features, but FANN works for now.
 Scripts under the directory `ann/`
 
 On R console, run `source("process_training_data.R")`.
