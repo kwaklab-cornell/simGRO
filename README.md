@@ -370,24 +370,12 @@ write.table(sim.data, "data.txt", quote = F, row.names = F, sep = "\t");
 Process the simulated data into training sets, for example FANN (http://leenissen.dk/fann/wp/). Would like to try Tensoflow for advanced features, but FANN works for now.
 Scripts under the directory `ann/`
 
-On R console, run `source("process_training_data.R")`
+On R console, run `source("process_training_data.R")`.
 This will generate `simGRO.data` and `simGRO.test.data` for the FANN format.
 
 To compile the simGRO_test program (modified from xor_test.cpp), complile by running `g++ simGRO_test.cpp -o simGRO_test -lfann` (need to have FANN libraries installed).
-
-Run `./simGRO_test simGRO.data simGRO.test.data 1 0.001` to train 1 state model (pause escape regulated or not).
-
-Also train 2, 3, or 4 state models.
-`./simGRO_test simGRO.2.data simGRO.2test.data 2 0.001`
-
-`./simGRO_test simGRO.3.data simGRO.3test.data 3 0.001`
-
-`./simGRO_test simGRO.4.data simGRO.4test.data 4 0.001`
-
-
-2 state test data examples.
-
-
-3 or 4 state models do not train well. This suggests Pol II pausing occupancy and and gene density profiles are not sufficient to dissect substeps in initiation.
-
+```
+./simGRO_test <training.data> <test.data> [number of output states (default = 1)] [target error (default = 0.001)]
+```
+Run `./simGRO_test simGRO.data simGRO.test.data` to train 1 state model (pause escape regulated or not).
 
